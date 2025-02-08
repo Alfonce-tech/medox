@@ -40,7 +40,7 @@ async function sendMessage() {
 
 // Function to fetch response from AI
 async function fetchAIResponse(message) {
-    let apiKey = "AIzaSyDhzxTkXEmjKUB3Z7H53e4Tv3Tz9WhMRsc"; // Replace with your actual API key
+   // let apiKey = ""; // Replace with your actual API key
     let endpoint = "https://generativelanguage.googleapis.com/v1beta2/models/gemini-pro:generateText?key=" + apiKey;
 
     let response = await fetch(endpoint, {
