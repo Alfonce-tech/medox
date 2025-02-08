@@ -28,38 +28,60 @@ body {
     border-color: lightgreen;
     box-shadow: 0 0 15px lightgreen;
 }
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Full-Width Carousel Box */
+.carousel-box {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Glowing Edge on Hover */
+.carousel-box:hover {
+    border-color: lightgreen;
+    box-shadow: 0 0 20px lightgreen;
+}
 
 /* Carousel Styling */
 .carousel {
     display: flex;
-    width: 400%; /* 4 images, so 400% */
-    animation: slide 8s infinite linear;
+    width: 400%; /* 4 images (100% each) */
+    animation: slide 12s infinite linear;
 }
 
 /* Image Styling */
 .carousel img {
-    width: 100%;
+    width: 100vw; /* Full viewport width */
     height: 100%;
     object-fit: cover;
 }
 
-/* Keyframes for Image Sliding */
+/* Keyframes for Smooth Image Sliding */
 @keyframes slide {
     0% { transform: translateX(0%); }
-    25% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
+    25% { transform: translateX(-100vw); }
+    50% { transform: translateX(-200vw); }
+    75% { transform: translateX(-300vw); }
     100% { transform: translateX(0%); }
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .carousel-box {
-        width: 95%;
         height: 250px;
     }
 }
-
 /* Header Styles */
 header {
     display: flex;
@@ -96,7 +118,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #28a745;
+    color: #b8fac8;
 }
 
 /* Dropdown Menu */
